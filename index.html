@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menaxhimi i Librave në Bibliotekë</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Menaxhimi i Librave në Bibliotekë</h1>
+        
+        <div class="form-container">
+            <h2>Shto Libër të Ri</h2>
+            <form id="bookForm">
+                <div class="form-group">
+                    <label for="title">Titulli:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="author">Autori:</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="publicationYear">Viti i Botimit:</label>
+                    <input type="number" id="publicationYear" name="publicationYear" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="genre">Zhanri:</label>
+                    <select id="genre" name="genre" required>
+                        <option value="">Zgjidhni Zhanrin</option>
+                        <option value="Roman">Roman</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Fantazi">Fantazi</option>
+                        <option value="Histori">Histori</option>
+                        <option value="Biografi">Biografi</option>
+                        <option value="Poezi">Poezi</option>
+                        <option value="Shkencë">Shkencë</option>
+                        <option value="Fëmijë">Libra për Fëmijë</option>
+                    </select>
+                </div>
+                
+                <button type="submit" id="submitBook">Shto Librin</button>
+            </form>
+            <div id="formError" class="error-message"></div>
+        </div>
+        
+        <div class="books-container">
+            <h2>Lista e Librave</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Kërko sipas titullit ose autorit...">
+            </div>
+            
+            <table id="booksTable">
+                <thead>
+                    <tr>
+                        <th>Titulli</th>
+                        <th>Autori</th>
+                        <th>Viti</th>
+                        <th>Zhanri</th>
+                        <th>Veprim</th>
+                    </tr>
+                </thead>
+                <tbody id="booksTableBody">
+                    <!-- Books will be loaded dynamically -->
+                </tbody>
+            </table>
+            
+            <div id="noBooks" class="no-books">Nuk ka libra të shtuar akoma.</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
